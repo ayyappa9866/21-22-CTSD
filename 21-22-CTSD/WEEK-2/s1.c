@@ -22,6 +22,7 @@ no of bytes allocated for long long int=8
 no of bytes allocated for float=4
 no of bytes allocated for double=8
 no of bytes allocated for long double=16 
+no of bytes allocated for arr=40
 */
 
 /* Dev c++ compiler output
@@ -32,4 +33,6 @@ no of bytes allocated for long int=4
 no of bytes allocated for long long int=8
 no of bytes allocated for float=4
 no of bytes allocated for double=8
-no of bytes allocated for long double=16 */
+no of bytes allocated for long double=16 
+no of bytes allocated for arr=40 
+*/
