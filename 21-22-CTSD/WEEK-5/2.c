@@ -1,19 +1,21 @@
 #include<stdio.h>
-void display(int);
-void display(int n)
+void reverseOrder(int);
+void reverseOrder(int n)
 {
 	int i;
-	for(i=1;i<=n;i++)
+	i=n;
+	while(i>0)
 	{
 		printf("%d\t",i);
+		i--;
 	}
-	printf("\nout of for loop");
+	printf("\nout of while loop");
 }
 int main()
 {
 	int num;
 	printf("Enter any number=");
 	scanf("%d",&num);
-	display(num);
+	reverseOrder(num);
 	return 0;
 }

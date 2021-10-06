@@ -1,19 +1,18 @@
 #include<stdio.h>
-void display(int);
-void display(int n)
+void jump(int);
+void jump(int n)
 {
 	int i;
-	for(i=1;i<=n;i++)
+	for(i=1;i<=10;i++)
 	{
-		printf("%d\t",i);
+		printf("%d * %d = %d\n",n,i,n*i);
 	}
-	printf("\nout of for loop");
 }
 int main()
 {
 	int num;
 	printf("Enter any number=");
 	scanf("%d",&num);
-	display(num);
+	jump(num);
 	return 0;
 }
