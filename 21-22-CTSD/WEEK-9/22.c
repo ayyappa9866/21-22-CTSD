@@ -1,0 +1,51 @@
+#include<stdio.h>
+int main()
+{
+	int m,n,p,q;
+	printf("Enter matrix A Size:\n");
+	scanf("%d%d",&m,&n);
+	printf("Enter matrix B Size:\n");
+	scanf("%d%d",&p,&q);
+	int A[m][n],B[p][q],sub[m][n],i,j;
+	if((m==p)&&(n==q))
+	{
+		printf("Enter Matrix A elements:\n");
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<n;j++)
+			{
+				scanf("%d",&A[i][j]);
+			}
+		}
+		printf("Enter Matrix B elements:\n");
+		for(i=0;i<p;i++)
+		{
+			for(j=0;j<q;j++)
+			{
+				scanf("%d",&B[i][j]);
+			}
+		}
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<n;j++)
+			{
+				sub[i][j]=A[i][j]-B[i][j];
+			}
+		}
+		printf("Subtraction result:\n");
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<n;j++)
+			{
+				printf("%d ",sub[i][j]);
+			}
+			printf("\n");
+		}
+	}//if
+	else
+	{
+		printf("Matrix Subtraction is not possible\n");
+	}//else
+	
+	return 0;
+}//main
