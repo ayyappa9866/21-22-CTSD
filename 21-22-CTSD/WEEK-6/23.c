@@ -31,6 +31,11 @@ int main()
 		 ch=fgetc(fp);
 		}//while
 		fclose(fp);
+		if(cc>0) // if file is empty cc=0 wc=0 lc=0 otherwise wc++ lc++
+		{
+			wc++;
+			lc++;
+		}
 		printf("No of Characters=%d\n",cc);
 		printf("No of Words=%d\n",wc);
 		printf("No of Lines=%d\n",lc);
