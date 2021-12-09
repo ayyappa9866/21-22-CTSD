@@ -6,6 +6,16 @@ struct Node
 	int data;
 	struct Node *next;
 }*head=NULL;
+int reversePrint(struct Node *ptr)
+{
+	if(ptr==NULL)
+	return -1;
+	else
+	{
+		reversePrint(ptr->next);
+		printf("%d->",ptr->data);	
+	}
+}
 void maximum()
 {
 	struct Node *ptr;
@@ -226,14 +236,14 @@ void deleteAtAnyPos()
 }//function
 int main()
 {
-	int choice,num,result;
+	int choice,num,result,f=0;
 	do
 	{
 		printf("\n*****LINKEDLIST MENU*****\n");
 		printf("1.create\n2.display\n3.count\n");
 		printf("4.insertAtBegin\n5.insertAtEnd\n6.insertAtAnyPos\n");
 		printf("7.deleteAtBegin\n8.deleteAtEnd\n9.delerteAtAnyPos\n10.Maximum\n");
-		printf("11.exit\n");
+		printf("11.ReversePrint\n12.exit\n");
 		printf("Enter your choice=");
 		scanf("%d",&choice);
 		switch(choice)
@@ -278,8 +288,13 @@ int main()
 				maximum();
 				break;
 			case 11:
+				f=reversePrint(head);
+				if(f==-1)
+				printf("LINKED LIST IS EMPTY\n");
+				break;
+			case 12:
 				break;
 		}
-	}while(choice!=11);
+	}while(choice!=12);
 }//main
 
